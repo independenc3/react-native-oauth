@@ -198,7 +198,7 @@ public class OAuthManagerDialogFragment extends DialogFragment implements Advanc
         private boolean interceptUrl(WebView view, String url, boolean loadUrl) {
           Log.i(TAG, "interceptUrl called with url: " + url);
 
-          // url would be http://localhost/twitter?denied=xxx when it's canceled
+          // url would be https://localhost/twitter?denied=xxx when it's canceled
           Pattern p = Pattern.compile("\\S*denied\\S*");
           Matcher m = p.matcher(url);
           if(m.matches()){

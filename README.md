@@ -168,7 +168,7 @@ Let's add the appropriate one for our provider. For instance, to set up twitter,
 
 After we link `react-native-oauth` to our application, we're ready to go. Android integration is much simpler, thanks to the in-app browser ability for our apps. `react-native-oauth` handles this for you.
 
-One note, *all* of the callback urls follow the scheme: `http://localhost/[provider_name]`. Make sure this is set as a configuration for each provider below (documented in the provider setup sections).
+One note, *all* of the callback urls follow the scheme: `https://localhost/[provider_name]`. Make sure this is set as a configuration for each provider below (documented in the provider setup sections).
 
 Make sure you add the following to your `android/build.gradle` file:
 
@@ -288,7 +288,7 @@ For instance, my app ID in this example is: `1745641015707619`. In the `Bundle I
 
 ![](./resources/facebook/redirect-url.png)
 
-For Android, you will also need to set the redirect url to `http://localhost/facebook` in the Facebook Login settings.
+For Android, you will also need to set the redirect url to `https://localhost/facebook` in the Facebook Login settings.
 
 ![](./resources/facebook/redirect-url.png)
 
@@ -336,7 +336,7 @@ const config =  {
 
 #### Google (Android)
 
-To set up Google on Android, follow the same steps as before, except this time instead of creating an iOS API, create a **web api credential**. Make sure to add the **redirect url** at the bottom (it defaults to `http://localhost/google`):
+To set up Google on Android, follow the same steps as before, except this time instead of creating an iOS API, create a **web api credential**. Make sure to add the **redirect url** at the bottom (it defaults to `https://localhost/google`):
 
 ![](./resources/google/android-creds.png)
 
@@ -347,7 +347,7 @@ When creating an Android-specific configuration, create a file called `config/de
 Adding Github auth to our application is pretty simple as well. We'll need to create a web application on the github apps page, which can be found at [https://github.com/settings/developers](https://github.com/settings/developers). Create one, making sure to add _two_ apps (one for iOS and one for Android) with the callback urls as:
 
 * ios: [app_name]:// oauth (for example: `firestackexample://oauth`)
-* android: http://localhost/github
+* android: https://localhost/github
 
 Take note of the `client_id` and `client_secret`
 
@@ -395,7 +395,7 @@ Lastly, Slack requires us to add a redirect_url.
 
 For **iOS**: the callback_url pattern is `${app_name}://oauth`, so make sure to add your redirect_url where it asks for them before starting to work with the API.
 
-for **Android**: the `callback_url` pattern is `http://localhost/slack`. Be sure to add this to your list of redirect urls.
+for **Android**: the `callback_url` pattern is `https://localhost/slack`. Be sure to add this to your list of redirect urls.
 
 ![](./resources/slack/redirect.png)
 
