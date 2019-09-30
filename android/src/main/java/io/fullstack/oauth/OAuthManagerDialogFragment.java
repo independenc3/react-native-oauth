@@ -176,6 +176,7 @@ public class OAuthManagerDialogFragment extends DialogFragment implements Advanc
 
 
     private void setupWebView(AdvancedWebView webView) {
+      webView.getSettings().setUserAgentString("Mozilla/5.0 Google");
       webView.setWebViewClient(new WebViewClient() {
         @Override
         public boolean shouldOverrideUrlLoading(WebView view, String url) {
